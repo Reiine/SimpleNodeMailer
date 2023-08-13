@@ -11,7 +11,7 @@ const mailTransporter = nodemailer.createTransport({
 })
 const sendPassMail = (email,userName,token) => {
     const details = {
-        from: 'reiineiangar@gmail.com',
+        from: 'your email',
         to: email,
         subject: 'Forgot Password',
         html: `<h1>Hello ${userName}!</h1><p>Forgot your password? No worries! Click the link below to change your password:-</p><br><a href='http://localhost:3000/reset-password/${token}'>Click Here</a>`
