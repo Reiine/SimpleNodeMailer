@@ -1,3 +1,5 @@
+// Make sure to put your email and APP PASSWORD in nodemailer.js file for sending emails to work
+
 const express = require('express');
 const cors = require('cors');
 const randomstring = require('randomstring')
@@ -10,7 +12,7 @@ app.use(cors());
 
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 mongoose.set('strictQuery',false);
 
 app.post('/register', async (req, res) => {
