@@ -8,7 +8,6 @@ mongoose
     console.log("can't connect to mongoose");
 })
 
-
 const regUser = new mongoose.Schema({
     email:{
         type:String,
