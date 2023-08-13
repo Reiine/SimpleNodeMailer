@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import ForgotPass from './components/ForgotPass';
 import Login from './components/Login';
