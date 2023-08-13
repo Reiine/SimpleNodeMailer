@@ -1,6 +1,7 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose
-.connect('mongodb://127.0.0.1:27017/task1')
+.connect(process.env.MONGO_URL)
 .then(()=>{
     console.log("mongoose connected")
 }).catch((e)=>{

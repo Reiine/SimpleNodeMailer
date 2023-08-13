@@ -4,10 +4,14 @@ const randomstring = require('randomstring')
 const app = express();
 const register = require('../model/register');
 const { sendPassMail, sendAuthMail } = require('./nodemailer');
+const { default: mongoose } = require('mongoose');
 
 app.use(cors());
 
 app.use(express.json());
+
+const PORT = process.env.PORT || 3001;
+mongoose.set('strictQuery',false);
 
 app.post('/register', async (req, res) => {
     const { name, email, pass } = req.body;
@@ -99,4 +103,4 @@ app.post('/reset-pass', async (req, res) => {
     }
 })
 
-app.listen(3001)
+app.listen(PORT)
